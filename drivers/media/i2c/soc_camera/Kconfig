@@ -20,6 +20,17 @@ config SOC_CAMERA_MT9M111
 	  This driver supports MT9M111, MT9M112 and MT9M131 cameras from
 	  Micron/Aptina
 
+config VIDEO_MT9M114
+	tristate "Aptina MT9M114 sensor support"
+	depends on I2C && VIDEO_V4L2
+	depends on MEDIA_CAMERA_SUPPORT
+	---help---
+	  This is a Video4Linux2 sensor-level driver for the
+	  Aptina MT9M114
+
+	  To compile this driver as a module, choose M here: the
+	  module will be called mT9m114.
+
 config SOC_CAMERA_MT9T031
 	tristate "mt9t031 support"
 	depends on SOC_CAMERA && I2C
